@@ -47,7 +47,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 # Train the model
-model.fit(train_features, train_labels, epochs=10, batch_size=32)
+model.fit(train_features, train_labels, epochs=10, batch_size=16)
 
 # Save the model
 model.save('sign_language_model.keras')

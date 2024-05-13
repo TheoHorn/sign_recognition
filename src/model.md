@@ -32,7 +32,7 @@ Cette couche est une autre couche entièrement connectée avec 26 nœuds (car me
 - metrics=['accuracy'] : Nous souhaitons suivre la précision du modèle pendant l'entraînement. La précision est le pourcentage d'images correctement classées par le modèle.
 
 ## Entraînement du modèle :
-Les données d'entrainement sont composés de 26 classes et de 27456 images. On a utilisé 20% des données pour la validation. Le modèle est entraîné sur 10 époques (c'est à dire que l'on va passer 10 fois sur l'ensemble des données d'entraînement) avec un batch_size de 32 (c'est à dire que l'on va mettre à jour les poids du modèle après avoir vu 32 images).
+Les données d'entrainement sont composés de 26 classes et de 27456 images. On a utilisé 20% des données pour la validation. Le modèle est entraîné sur 10 époques (c'est à dire que l'on va passer 10 fois sur l'ensemble des données d'entraînement) avec un batch_size de 16 (c'est à dire que l'on va mettre à jour les poids du modèle après avoir vu 16 images).
 
 ## Évaluation du modèle :
-Après l'entraînement, on évalue le modèle sur les données de validation pour voir comment il se comporte sur des données qu'il n'a pas vues pendant l'entraînement. On obtient une précision de 0.91, ce qui signifie que le modèle est capable de prédire correctement la lettre de l'alphabet dans 91% des cas.
+Après l'entraînement, on évalue le modèle sur les données de validation pour voir comment il se comporte sur des données qu'il n'a pas vues pendant l'entraînement. On obtient une précision de 0.9215, ce qui signifie que le modèle est capable de prédire correctement la lettre de l'alphabet dans 92% des cas.
