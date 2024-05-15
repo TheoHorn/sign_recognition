@@ -1,7 +1,9 @@
+##### USED FOR TESTING OTHERS MODELS #####
 import pandas as pd
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers, models
+
 
 # Load the data
 train_data = pd.read_csv('data/sign_mnist_train.csv')
@@ -36,9 +38,9 @@ test_labels = tf.keras.utils.to_categorical(test_labels, 26)
 
 # Create the model
 model = models.Sequential([
-    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+    layers.Conv2D(32, (2, 2), activation='relu', input_shape=(28, 28, 1)),
     layers.MaxPooling2D((2, 2)),
-    layers.Conv2D(64, (3, 3), activation='relu'),
+    layers.Conv2D(64, (2, 2), activation='relu'),
     layers.MaxPooling2D((2, 2)),
     layers.Flatten(),
     layers.Dense(64, activation='relu'),
@@ -54,7 +56,7 @@ model.compile(optimizer='adam',
 model.fit(train_features, train_labels, epochs=10, batch_size=16)
 
 # Save the model
-model.save('sign_language_model.keras')
+model.save('TESTING_sign_language_model.keras')
 
 ### Evaluate the model
 # accuracy represents the performance of the model
