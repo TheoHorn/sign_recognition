@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras import layers, models
+from keras import layers, models
 
 # Load the data
 train_data = pd.read_csv('data/sign_mnist_train.csv')
