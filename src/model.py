@@ -48,16 +48,16 @@ model = models.Sequential([
 # Compile the model
 model.compile(optimizer='adam',
               loss='categorical_crossentropy',
-              metrics=['accuracy'])
+              metrics=['accuracy','recall'])
 
 # Train the model
-model.fit(train_features, train_labels, epochs=10, batch_size=16)
+model.fit(train_features, train_labels, epochs=10, batch_size=8)
 
 # Save the model
 model.save('sign_language_model.keras')
 
 ### Evaluate the model
 # accuracy represents the performance of the model
-test_loss, test_accuracy = model.evaluate(test_features, test_labels)
-print('Test loss :', test_loss)
+test_loss, test_accuracy, test_recall = model.evaluate(test_features, test_labels)
 print('Test accuracy :', test_accuracy)
+print('Test recall :', test_recall)
