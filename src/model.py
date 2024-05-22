@@ -51,7 +51,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy','recall'])
 
 # Train the model
-model.fit(train_features, train_labels, epochs=10, batch_size=8)
+model.fit(train_features, train_labels, epochs=3, batch_size=8)
 
 # Save the model
 model.save('sign_language_model.keras')
