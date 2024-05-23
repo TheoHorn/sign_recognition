@@ -8,6 +8,11 @@ Ce projet vise à développer un système de reconnaissance des lettres dans la 
 python3 src/model.py
 ```
 
+### Evaluation du modèle
+```bash
+python3 src/model_evaluation.py
+```
+
 ### Exécution de la démo
 ```bash
 python3 src/demo.py
