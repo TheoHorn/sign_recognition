@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 from keras import layers, models
+from keras.callbacks import EarlyStopping
 from matplotlib import pyplot as plt
 import sklearn.metrics as metrics
 import seaborn as sns
@@ -53,9 +54,15 @@ model.compile(optimizer='adam',
               loss='categorical_crossentropy',
               metrics=['accuracy', 'recall'])
 
-# Train the model
-model.fit(train_features, train_labels, epochs=3, batch_size=32)
+# Define early stopping callback
+early_stopping = EarlyStopping(monitor='val_loss', patience=3, restore_best_weights=True)
 
+# Train the model with early stopping
+history = model.fit(train_features, train_labels,
+                    epochs=15,
+                    batch_size=32,
+                    validation_split=0.2,
+                    callbacks=[early_stopping])
 # Save the model
 model.save('sign_language_model.keras')
 
