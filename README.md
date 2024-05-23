@@ -1,15 +1,19 @@
-# Reconnaissance des lettres de la langue américaine des signes
+# Reconnaissance des lettres de la langue des signes
 
 ## Description
-This project aims to develop a system for recognizing letters in American Sign Language (ASL). The goal is to create a machine learning model that can accurately identify and classify ASL letters based on input images.
+Ce projet vise à développer un système de reconnaissance des lettres dans la langue des signes. L'objectif est de créer un modèle d'apprentissage automatique capable d'identifier et de classer avec précision les lettres en fonction des images d'entrée.
 
-## Features
+### Entraînement du modèle
+```bash
+python3 src/model.py
+```
 
-## Installation
+### Exécution de la démo
+```bash
+python3 src/demo.py
+```
 
-## Usage
-## Contributing
-Contributions are welcome! If you would like to contribute to this project, please follow the guidelines in the `CONTRIBUTING.md` file.
+Pour plus de précisions sur le fonctionnement du modèle et des options, voir [src/model.md].
 
 ## Contact
-For any questions or inquiries, please contact [theo.hornberger@telecomnany.eu](mailto:theo.hornberger@telecomnany.eu).
+Pour toute question ou demande de renseignements, veuillez contacter [theo.hornberger@telecomnancy.eu], [mathias.aurand-augier@telecomnancy.eu] et [terry.tempestini@telecomnancy.eu].
