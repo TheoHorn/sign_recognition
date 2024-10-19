@@ -4,12 +4,12 @@
 This project aims to develop a system for recognizing letters in sign language. The aim is to create a machine learning model capable of accurately identifying and classifying letters based on input images.
 
 ### Model training
-bash
+```bash
 python3 src/model.py
 ```
 
 ### Model evaluation
-``bash
+```bash
 python3 src/model_evaluation.py
 ```
 
@@ -22,9 +22,6 @@ For details of how the model and options work, see [src/model.md].
 
 ## Contact
 If you have any questions or queries, please contact [theo.hornberger@telecomnancy.eu], [mathias.aurand-augier@telecomnancy.eu] and [terry.tempestini@telecomnancy.eu].
-
-Translated with DeepL.com (free version)
-
 
 
 # Reconnaissance des lettres de la langue des signes
